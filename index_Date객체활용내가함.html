@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+    
+    <script>
+        // Date 객체 : 날짜와 시간에 대한 정보 값을 얻거나 설정할 수 있습니다.
+        // Date 객체 생성 방법
+        // var date = new Date();
+        // var date = new Date('년도/월/일') // 날짜를 문자열 형식으로 설정할 수 있음
+        // var date = new Date(년도, 월, 일, 시, 분, 초, 밀리초);
+        // getMonth() 메서드에서 '월'값을 반환함(0 ~ 11) : 1월을 0으로 표현하기 때문에 +1을 해줌
+        // getDay() 메서드에서 '요일'값을 반환함(0 일요일 ~ 6 토요일)
+
+        //new Date(year, monthIndex, day, hours, minutes)
+        /* var dateObj = new Date(2022, 8, 20, 10, 10);
+        var dateInfo = {
+            year : dateObj.getFullYear(), // 2022
+            month : dateObj.getMonth()+1, // 8 + 1 = 9
+            date : dateObj.getDate(), // 20
+            hours : dateObj.getHours(), // 10
+            minutes: dateObj.getMinutes(), // 10
+            //toUTCString() : UTC(국제 표준시) 날짜/시간 정보를 문자열로 반환합니다.
+            nowDate : dateObj.toUTCString()
+        }// 2022/09/20 10:10분을 국제 표준시로 변환.
+        for(var i in dateInfo){
+            document.write(i + ' : ' + dateInfo[i] + '<br>');
+        } */
+
+        //setTime() 을 이용한 일자 구하는 방식
+        var today = new Date(2021, 2, 20);
+        var afterDay = new Date(2022, 2, 19);
+        var diffDay = afterDay.getTime() - today.getTime();
+        document.write('<br>' + diffDay + '<br>');
+                                       //1000밀리초/60초/60분/24시간
+        var willDay = Math.ceil(diffDay / 1000 / 60 / 60 / 24);
+        document.write(willDay + '일');
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

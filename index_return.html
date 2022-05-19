@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선언적 함수</title>
+    
+    <script>
+        var name = '장나라';
+        
+        function process(){ // process()함수는 매개변수가 없는 함수입니다.
+            var kor = 100;
+            var eng = 90;
+            var avg = (kor + eng) / 2;
+            //return 명령어는 함수를 호출한 곳으로 결과값을 반환(return)해주는 명령어 입니다.
+            return avg;
+        }
+        document.write(name + ' 학생의 평균 점수는 ' + process() + '점 입니다~!');
+        
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

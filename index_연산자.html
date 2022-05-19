@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 리뷰</title>
+    <script>
+       //undefined 데이터 : 정의되지않은값
+    //ES5 에서는 let과 const를 구분하지 않고, var로 활용했지만
+    //ES6 에서는 var을 let과 const를 구분해서 사용합니다.
+    //var은 점차 사용을 권장하지 않고 있습니다.
+     
+       var subject1 ='css';
+       var subject2 ='html';
+       var score1 = 100;
+       var score2 = 200;
+       document.write(subject1 + '점수는' + score1 + '입니다.'+'<br>');
+       document.write(subject2 + '점수는' + score2 + '입니다.'+'<br>');
+       document.write('두과목의 평균은' + (score1 + score2 )/2 + '입니다');
+
+    //ECMAScript 2015(ES6) 에서 추가된 템프릿 문자열 표현
+        document.write(`${subject1}) 과목 성적은 ${score1}`+'<br>');
+
+    document.write(score1 + score2+'<br>');
+    document.write(score1 - score2+'<br>');
+    document.write(score1 / score2+'<br>');
+    document.write(score1 * score2+'<br>');
+    document.write(score1 % score2+'<br>');
+
+    var score3 = 3;
+    var score4 = 4;
+    document.write(score4 % score3);
+
+       
+    </script>
+</head>
+<body>
+     
+</body>
+</html>

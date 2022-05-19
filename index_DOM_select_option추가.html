@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일</title>
+    <!-- select 요소의 option 요소 추가, 삭제 방법 -->
+    <!-- document.form요소.select요소.add(ner Option("option 내용", "option 속성값"))
+    document.form요소.select요소.length = 요소의 개수 -->
+    <script>
+        window.onload = function(){
+            var frm = document.frm;
+            var date = new Date();
+            var year = date.getFullYear();
+            for(var i = 1980; i <= year; i++){
+                frm.y.add(new Option(i,i)); // option요소를 추가합니다.
+            }
+            for(var i = 1; i <= 12; i++){
+                frm.m.add(new Option(i,i));
+            }
+            frm.sub.length = 5; // 옵션 요소를 5개로 만듭니다.
+        }
+    </script>
+
+</head>
+
+<body>
+    <form action="#" name="frm">
+        <select name="y">
+            <option value="#">년도 선택</option>
+        </select>
+        <select name="m">
+            <option value="#">월 선택</option>
+        </select>
+        <select name="sub">
+            <option value="#">과목 선택</option>
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="Javascript">Javascript</option>
+            <option value="React">React</option>
+        </select>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

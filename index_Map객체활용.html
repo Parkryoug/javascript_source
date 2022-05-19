@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    
+    <script>
+        var sub = new Map();
+        sub.set('html', 1);
+        sub.set('css', 2);
+        sub.set('javascript', 3);
+        sub.set('jQuery', 4);
+
+        var sub2 = new Map([
+            ['html', 1],
+            ['css', 2],
+            ['javascript', 3],
+            ['jQuery', 4],
+            ['React', 5]
+        ]);
+
+        console.log(sub2.size + '<br>');
+        console.log(sub2.has('React') + '<br>');
+
+        // size = sub 객체의 속성 개수를 반환함
+        document.write(sub.size + '<br>'); // 4
+        // get('css') 메서드는 'css' 키의 값을 읽어옴
+        document.write(sub.get('css') + '<br>'); // 2
+        // has('html) 메서드는 'html' 키의 존재 여부 확인함
+        document.write(sub.has('html') + '<br>'); // true
+
+        for(var key of sub.keys()){
+            document.write(key + '<br>'); // sub 객체의 모든 키를 가져옴
+        }
+
+        for(var keyValue of sub.values()){
+            document.write(keyValue + '<br>'); // sub 객체의 모든 키값을 가져옴
+        }
+
+        sub.delete('html'); // 'html' 키만 삭제함
+        document.write(sub.has('html') + '<br>'); // false = delete 되었기 때문.
+
+        sub.clear(); // 모든 요소를 삭제함
+        document.write(sub.size);
+
+
+
+    </script>
+</head>
+<body>
+    
+
+
+
+
+
+
+</body>
+</html>

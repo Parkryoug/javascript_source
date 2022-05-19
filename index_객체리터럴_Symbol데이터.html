@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title> 
+    <script src="js/common.js"></script>
+      <script>        
+      // 객체 리터럴(Object literal)
+      var today = {
+         subject: 'css',  // 속성 : 속성값,
+         credit : 1,
+         
+         printOut: function(){
+            return this.subject + ', ' + this.credit + '학점'; // css, 1학점
+         }
+      };
+
+      today.days = 20;    // 객체 리터럴 속성 추가
+      delete today.credit;   // 객체 리터럴 속성 삭제
+      today.printOut = function(){  // 객체 리터럴 속성 변경
+         return this.subject + ', ' + this.days + '일';
+      };
+      // document.write(today.printOut());  // css, 20일
+
+      // Symbol(심볼) 데이터 : ECMAScript 2015(ES6)에서 새로 추가된 원시 데이터 타입으로
+      // 유일한 식별자를 의미합니다. 심볼 데이터의 속성명은 '[ ]' 로 표현합니다.
+
+      var subjectName = Symbol();
+      var info = {
+         [subjectName] : '자바스크립트',  // '[ ] 심볼 데이터의 속성명 표현'
+         subjectName : '제이쿼리'
+      }
+
+      document.write(info[subjectName] + ', ' + info.subjectName); // 자바스크립트, 제이쿼리
+
+
+      
+      
+
+      </script>
+   </head>
+<body>
+    
+    
+</body>
+</html>

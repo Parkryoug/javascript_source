@@ -1,0 +1,4 @@
+//회원 유형
+const NORMAL = 01;
+const VIP   = 02;
+const VVIP = 03;

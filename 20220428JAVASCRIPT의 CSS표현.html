@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    
+        
+    <head>
+       <!-- 자바스크립트 스타일 형식 -->
+       <!-- 요소.style.속성 = '속성 값' -->
+       <!-- 자바스크립트 스타일 속성과 CSS기본 속성의 형식은 같지만 -->
+       <!-- 'border-color'의 경우 자바스크립트 스타일 속성에서는 '-'를 사용할 수 없기에 'borderColor'와 같이 Camle표기법을 사용한다. -->
+            <!-- CSS 스타일 형식                         자바스크립트 스타일 형식
+
+            backgruound-color                       backgruoundColor
+            border-bottom-width                     borderBottomWidth
+            margin-top                               marginTop -->
+
+        <script>
+            window.onload = function(){
+                var content = document.getElementById('content');
+                content.style.width = '200px';
+                content.style.height = '200px';
+                content.style.border = '4px solid #ff0000';
+                //'-'이들어간 스타일태그를 자바스크립트 스타일 표현 형식
+                content.style.textAlign = 'center';
+                content.style.fontWeight = 'bold';
+                content.style.lineHeight = '200px';
+            }
+
+        </script>
+
+    </head>
+<body>
+
+        <div id="content">내용</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    <script>
+        //select 요소의 option 요소 추가 ,삭제 방법
+        // document.form요소.select요소.add(new Option("option내용", "option속성 값"))
+        // document.form요소.select요소.lenth = option 요소의 갯수 파악가능
+
+        window.onload = function(){
+            var frm = document.frm;
+            var date = new Date();
+            var year = date.getFullYear();
+            for(var i = 1980; i <= year; i++){
+                frm.y.add(new Option(i, i)); //Option 요소를 추가합니다.
+            }
+            for(var j = 1; j <=12; j++){
+                frm.m.add(new Option(j, j));
+            }
+            frm.sub.length = 5; //option태그의 갯수를 줄일수있다 3일경우 결과값은(1.과목선택 2.html 3.css 까지만 보이게된다)
+        }
+
+
+
+
+    </script>
+        
+    <head>
+       
+    </head>
+<body>
+    <form action="#" name="frm">
+        <select name="y">
+            <option value="#">년도 선택</option>
+        </select>
+        <select name="m">
+            <option value="#">월 선택</option>
+        </select>
+        <select name="sub">
+            <option value="#">과목선택</option>
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="javascript">javascript</option>
+            <option value="react">react</option>
+        </select>
+        <input type="submit" value="제출">
+    </form>
+
+</body>
+</html>

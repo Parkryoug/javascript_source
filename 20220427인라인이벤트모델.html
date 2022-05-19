@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+   <script>     
+    // 이벤트를 연결하는 방식에는 인라인 이벤트 모델, 기본 이벤트 모델
+    // 표준이벤트 모델이 있으며, 이벤트 앞에 'on'을 붙여 줍니다.
+    
+
+    //인라인 이벤트 모델 : html 요소/태그/엘리먼트/elemnet에 직접 이벤트를 연결하는 방식
+
+    function sum(n){
+        alert(n);
+    }
+
+</script>
+   </head>
+<body>
+    <!-- //인라인 이벤트 모델 : html 요소/태그/엘리먼트/elemnet에 직접 이벤트를 연결하는 방식 -->
+    <!-- <button ondbclick="console.log('ok');">jangnara</button> -->
+    <button onclick="sum(3)">버튼!</button>
+</body>
+</html>

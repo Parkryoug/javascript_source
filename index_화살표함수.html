@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수(Arrow Function)</title>
+    
+    <script>
+        
+        const doAdditional = (s1, s2) => s1 + s2;
+        document.write(doAdditional(2, 5) + '<br>'); // 7
+        // 위는 화살표 방식을 사용한 익명 함수, 아래는 일반 익명 함수
+        const doAdditional_func = function(s1, s2){
+            return s1 + s2;
+        }
+        document.write(doAdditional_func(2, 5) + '<br>'); // 7
+
+        const doAverage = (s1, s2) => {
+            var avg = (s1 + s2) / 2;
+            return avg;
+        }
+        document.write(doAverage(4, 2) + '<br>'); // 3
+
+        const doAverage_func = function(s1, s2){
+            var avg = (s1 + s2) / 2;
+            return avg;
+        }
+        document.write(doAverage_func(4,2) + '<br>'); // 3
+
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

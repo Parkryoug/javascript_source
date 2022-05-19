@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title> 
+   <script>     
+    // ^는 시작 패턴 일치를 의미하며
+    //d는 숫자를 검색하고, {10,11}는 10자 ~11자를 의미합니다.
+    //$는 끝 패턴 일치를 의미합니다.
+    // var hpReg = /^\d{10,11}$/; // 
+        //ex) 010-1111-2222 //11
+       // 010-111-3333; //10
+
+    // var hp1 = '010123456'; //숫자 9자
+    // var hp2 = '01012345678'; //숫자 11자
+
+    // document.write(hpReg.test(hp1) + '<br>'); 
+    // document.write(hpReg.test(hp2)); 
+
+
+    //02또는 010으로 시작하며 - 다음에 3자리에서 4자리이며 - 마지막은 숫자4자리인 패턴
+    // var phoneReg = /^(02|010)-\d{3,4}-\d{4}/; 
+
+    // var hp3 = prompt('전화번호를 입력해 주세요!', ' - - ');
+    // if(phoneReg.test(hp3) == true){
+    //     document.write('인증 되셨습니다.');
+    // }else{
+    //     document.write('전화 번호 형식이 잘못 되셨습니다.');
+    // }
+
+
+    //[A-Za-z0-9!#$%^&*_-] : 이메일아이디 부분에 해당하며, 영문, 숫자, 특수문자 중
+    //                       하나의 문자를 의미한다
+    //[A-Za-z0-9!#$%^&*_-]+ : 이메일 아이디는 영문, 숫자, 특수문자 중 하나의 문자가
+    //                        하나의 문자가 1번 이상 반복해서 나와야 하기 떄문에 +패턴을 추가함.
+    //[A-Za-z0-9!#$%^&*_-]+@ : 이메일의 '이메일 아이디@'패턴을 의미함
+    //[A-Za-z0-9!#$%^&*_-]+@[\.[A-A-Za-z0-9_-]+ : 이메일 주소 앞부분에 해당하며 영문, 숫자, 특수문자 중 하나의 문자가 1번 이상 반복
+    //                                            해서 올 수있음. 즉, '이메일 아이디@이메일 앞 주소'패턴을 의미함
+    //(\.[A-A-Za-z0-9_-]+){1,2} : 이메일 주소 나머지 부분에 해당하며 '.나머지 주소'가 1번 ~2번 정도 올 수 있는 패턴임.
+    //                            즉 '이메일아이디@이메일 앞주소.나머지 주소'
+    //                            또틑 '이메일아이디@이메일 앞주소.나머지 주소.나머지 주소'
+    // var emailReg = /^[A-Za-z0-9!#$%^&*_-]+@[A-A-Za-z0-9_-]+(\.[A-A-Za-z0-9_-]+){1,2}$/;
+
+    // var email1 = 'abc@nice';
+    // var email2 = 'abc&1_23&A-BC@icox.com'
+    // document.write(emailReg.test(email1) + '<br>');
+    // document.write(emailReg.test(email2) + '<br>');
+
+
+    // \w = 알파벳, 숫자, _패턴을 검색함
+    // ? = ?앞의 문자가 0번 또는 1번 패턴을 나타내는걸 의미함(ex= /a?b/ 는 'b', 'ab')
+    // 한개 이상의 알파벳(또는 숫자 또는 _)@한개이상의 알파벳(또는 숫자 또는 _)
+    // .한개이상의 알파벳(또는 숫자 또는 _).한개이상의알파벳(또는 숫자 또는 _)없음 또는 한개이상
+    // var emailPattern = /^\w+@\w+\.\w+(\.\w+)?$/
+
+    // var emailSample1 = 'test@google.com';
+    // var emailSample2 = 'test@google.co.kr';
+    // document.write(emailPattern.test(emailSample2));
+    
+        // var userEamil = prompt('이메일을 입력해 주시기 바랍니다.', '예시 : uesr@gmail.com');
+        // if(emailPattern.test(userEamil) == true){
+        //     document.write('사용가능한 이메일 입니다!');
+        // }else{
+        //     document.write('유효하지 않는 이메일 형식입니다!');
+        // }
+
+
+
+   </script>
+   </head>
+<body>
+    
+    
+</body>
+</html>

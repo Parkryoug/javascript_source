@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일</title>
+    <!-- form객체는 document객체의 하위 객체중 하나입니다. form객체를 이용하면 'form 유효성 검사' 등과 같은 여러가지 form 요소에 관련된 작업을 수행할 수 있습니다. -->
+    <!-- form 객체 선택 방법 -->
+        <!-- form 객체에서는 name 속성으로 form 요소들을 선택합니다. -->
+        <!-- document.폼명.요소명
+        document.forms[index].elements[index]
+        document.forms[index][index]
+        document.forms[폼명].elements['요소명']
+        document.forms[폼명]['요소명'] -->
+    <script>
+        window.onload = function(){
+            var frm1 = document.frm1;
+            var frm2 = document.frm2;
+            console.log(frm1.search.placeholder);
+            console.log(frm2.subject.placeholder);
+            console.log(frm2.credit.placeholder);
+            console.log(document.forms[0].elements[0].placeholder);
+            console.log(document.forms[1].elements[0].placeholder);
+            console.log(document.forms[1][1].placeholder);
+            console.log(document.forms['frm1'].elements['search'].placeholder);
+            console.log(document.forms['frm2']['subject'].placeholder);
+        }
+    </script>
+
+</head>
+
+<body>
+    <form action="#" name="frm1">
+        <input type="search" name="search" placeholder="검색어를 입력해 주세요!">
+        <input type="submit" value="확인!">
+    </form>
+    <form action="#" name="frm2">
+        <input type="text" name="subject" placeholder="과목을 입력해 주세요!">
+        <input type="password" name="credit" placeholder="학점을 입력해 주세요!">
+        <input type="submit" value="확인!">
+    </form>
+</body>
+</html>

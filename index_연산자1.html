@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+    <script>
+        var score = 100;
+        document.write(++score + '<br>'); // 101
+        document.write(++score + '<br>'); // 102
+        document.write(++score + '<br>' + '<br>'); // 103
+
+        var score3 = 100;
+        document.write(score3++ + '<br>') // 100
+        document.write(score3++ + '<br>') // 101
+        document.write(score3++ + '<br>') // 102
+        document.write(score3++ + '<br>' + '<br>') // 103
+
+        var score2 = 103;
+        document.write(--score2 + '<br>') // 102
+        document.write(--score2 + '<br>') // 102
+        document.write(--score2 + '<br>' + '<br>') // 100
+
+        var score4 = 100;
+        document.write(score4-- + '<br>') // 100
+        document.write(score4-- + '<br>') // 99
+        document.write(score4-- + '<br>') // 98
+        document.write(score4-- + '<br>' + '<br>') // 97
+
+        // = 우변의 값을 좌변에 대입한다.(예시 : var value = 10;)
+        // += (예시 : num += 7; 는 num = num + 7; 과 같은 표현임)
+        // += (예시 : num -= 7; 는 num = num - 7; 과 같은 표현임)
+        // += (예시 : num *= 7; 는 num = num * 7; 과 같은 표현임)
+        // += (예시 : num /= 7; 는 num = num / 7; 과 같은 표현임)
+        // += (예시 : num %= 7; 는 num = num % 7; 과 같은 표현임)
+
+        var num = 8;
+        num %= 3;
+        document.write(num); // 
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

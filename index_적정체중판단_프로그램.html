@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 리뷰</title> 
+    
+    <script>    
+     var name = prompt('고객님의 성함을 입력해 주시기 바랍니다!', ''); // 이름 입력 받음
+     var height = prompt('고객님의 키를 입력해 주시기 바랍니다.', ''); // 키 입력 받음
+     var weight = prompt('고객님의 몸무게를 입력해 주시기 바랍니다.', ''); // 몸무게 입력 받음
+
+     var normal_w = (height - 100) * 0.9; // 기본 체중
+     var result = (weight >= normal_w - 5) && (weight <= normal_w + 5) ; // 오차범위 ± 5
+     
+     // var final_result = result ? '적정 체중입니다!' : '적정 체중이 아닙니다!';
+
+     // 삼항연산자 대신에 if~else문 사용 예시
+
+     if(result){
+        document.write(name + "님은 " + '적정 체중입니다!');  
+     }else{
+        document.write(name + "님은 " + '적정 체중이 아닙니다!');  
+     }
+        
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

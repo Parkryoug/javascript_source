@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+<script>
+    //clearInterval () 메서드는 setInterval()을 중지시키는 메서드입니다.
+    //clearInterval을 사용하려면 setInterval()이 변수에 저장되어 있어야합니다.
+
+    window.onload = function() {
+        var bt = document.getElementById('bt');
+        var i = 0;
+        var increase = setInterval(function(){
+            i++;
+            alert(i);
+        }, 2000);
+        bt.onclick = function (){
+            clearInterval(increase);
+        }
+    }
+</script>
+   </head>
+<body>
+    <button id="bt">멈춤</button>
+</body>
+</html>

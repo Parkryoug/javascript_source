@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    
+        
+    <head>
+       
+        <script>
+         
+        </script>
+   </head>
+<body>
+   <p id="inner">힘내세요!
+       <span>화이팅입니다</span>
+   </p>
+   <script>
+       //innerText는 element 내분에 있는 text 값들을 말한다.
+       console.log(document.getElementById('inner').innerText);
+   </script>
+   <script>
+       //innerHTML는 element 내부에 있는 HTML이나 XML 모두를 말한다. (inner id에있는 text와 자식요소의 span태그와 text까지 다 보인다)
+       console.log(document.getElementById('inner').innerHTML);
+   </script>
+</body>
+</html>

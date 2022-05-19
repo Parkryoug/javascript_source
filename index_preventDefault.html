@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <script>
+// preventDefault() 메서드 = html 요소중에서 자바스크립트의 이벤트가 아닌 HTML 요소/태그 자체가 가지고있는 이벤트를 말합니다. 예를들면, a요소/태그는 내용을 클릭했을 때 링크 주소로 페이지가 이동하거나 submit 버튼처럼 버튼 클릭하면 폼 값을 전송하는 submit 요소 자체의 이벤트 등을 말합니다.
+// 다음의 예시에서 a태그의 기본 이벤트 발생을 시키지 않으려면 preventDefault() 메서드를 사용하거나 return flase를 사용하면 된다.
+window.onload = function(){
+    var test = document.getElementById('kbs');
+    kbs.onclick = function(event){
+        alert('KBS 한국 방송 공사');
+        // event.preventDefault();
+        return false;
+    }
+}
+
+
+    </script>
+</head>
+<body>
+    <div><a href="http://www.kbs.co.kr" id="kbs" target="_blank">KBS한국방송공사</a></div>
+</body>
+</html>

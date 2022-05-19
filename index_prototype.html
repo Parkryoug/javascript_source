@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    
+    <script>
+        //prototype : '생성자 함수'로 생성된 객체들은 '생성자 함수'에서 정의한 속성 그대로 상속 받습니다. 객체 메서드의 경우 다른 속성처럼 값의 변화가 엇기 때문에 불필요하게 상속시켜 메모리를 낭비할 필요는 없습니다. prototype을 이용하면 객체의 메서드를 '생성자 함수'내에 정의하지 않고도 생성된 객체에서 호출하여 사용할 수 있습니다.
+
+        function Triangle(b, h){
+            this.base = b;
+            this.height = h;
+        };
+        
+        Triangle.prototype.area = function(){
+            return this.base * this.height / 2 + '<br>';
+        };
+        Triangle.prototype.printOut = function(){
+            return '밑변 : ' + this.base + '<br>' + '높이 : ' + this.height + '<br>' + '넓이 : ' + this.area()+ '<br>';
+        };
+
+        var Triangle1 = new Triangle(30, 20);
+        document.write(Triangle1.area());
+        var Triangle2 = new Triangle(80, 40);
+        document.write(Triangle2.printOut());
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+   <script>     
+    // 기본 이벤트 모델 : HTML 요소/태그/엘리먼트/Element를 가져온 후 이벤트를 '객체의 메서드' 형식(객체.메서드 = Function(){...})
+    // 으로 연결하는 방식
+    
+    //주의할점 : HTML 요소/태그/엘리먼트/Element를 가져올때는 순서상 가져올 요소가 요소를 가져오는 명령어보다 먼저있어야함 
+    //만약에, 가져올 요소보다 가져올 명령어가 더 앞에있을 경우 반드시 load 이벤트를 적용해야함
+
+    window.onload =function(){  //가져오는 명령어가 앞에있을경우 onload이벤트를 적용해준다
+
+    var bt = document.getElementById('bt');
+    // bt.onclick = function(){
+    //     alert('ok');
+    // };
+    function view(){        
+        alert('view');
+    }
+    //기본 이벤트 모델로 다른 함수를 호출할 때는 함수에 ()를 붙이지 않습니다. 만약()를 붙이게 되면 웹페이지가 실행되었을 때
+    //요소를 클릭하지 않아도 이벤트가 한번 실행되게 됩니다.
+    //이것을 이벤트 강제 실행이라고 합니다
+    bt.onclick = view;
+
+};
+</script>
+   </head>
+<body>
+    <!-- 가져올 요소 -->
+   <button id="bt">버튼!</button> 
+    
+</body>
+</html>

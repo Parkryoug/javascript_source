@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    <head>
+        <style>
+            div{
+                position: fixed;
+                left: 100px;
+                top : 10px;
+                width : 200px;
+                height: 200px;
+                background: yellowgreen;
+            }
+        </style>
+    <script>     
+        //요소의 생성 및 삭제
+        function createEle() {
+            var bt = document.getElementById('bt');
+            function popup() {
+                //createElement() : 요소를 생성하는 메서드
+                var div = document.createElement('div');
+                var p = document.createElement('p');
+                //createTextNode() : text요소를 생성하는 메서드
+                var txt = document.createTextNode('Javascript');
+                //appendChild() : 요소를 부모와 자식의 관계로 이어주는 메서드
+                //부모요소.appendChild(자식 요소)
+                p.appendChild(txt);
+                div.appendChild(p);
+                document.body.appendChild(div);
+            }
+            //bt.onclick = popup(); ()를 붙이면 내가원할때 실행되는게 아닌 바로 실행을해버린다
+            bt.onclick = popup;
+        }
+        //표준 이벤트 모델 (이벤트와 함수를 이어주는 역활)
+        addEventListener('load', createEle);
+    </script>
+   </head>
+<body>
+   <button id="bt">요소생성</button>
+</body>
+</html>

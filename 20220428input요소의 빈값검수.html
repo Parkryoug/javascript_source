@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    <script>
+        // input 요소의 빈값 검수 : 로그인 시 아이디나 패스워드를 입력하지 않았을 경우 메세지를 띄워주는 프로그램을 코딩
+        // 그전에 알아둬야할것 : 
+        // form 객체 프로퍼티 및 메서드
+        //     속성값                  속성 의미
+        //     value           input,textarea요소의 value값을 반환한다
+        //     focus()             요소에 포커스를 맞춥니다.
+
+
+        window.onload = function(){
+            var login = document.login;
+            login.onsubmit = function(){
+                if(!login.id.value){//login에 id에 value값이 없다면
+                    alert('아이디를 입력해주세요!');
+                    login.id.focus(); //아이디 input 요소로 포커스 이동시켜줌
+                    return false; //함수를 종료하고 폼 전송을 막아 줍니다.
+                } 
+                if(!login.pw.value){
+                    alert('비밀번호를 입력해주세요!');
+                    login.pw.focus();
+                    return false;
+                };
+            };
+        };
+
+
+    </script>
+        
+    <head>
+        <form action="#" name="login" method="post">
+        <div>
+            <label for="id">아이디
+            </label>
+            <input type="text" name="id" id="id">
+        </div>
+        <div>
+            <label for="pw">비밀번호</label>
+            <input type="password" name="pw" id="pw">
+        </div>
+        <div>
+            <input type="submit" value="확인">
+        </div>
+        </form>
+    </head>
+<body>
+  
+
+</body>
+</html>

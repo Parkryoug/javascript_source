@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    
+        
+    <head>
+        <script>
+            //자바스크립트 활용 요소 삭제
+            function createDIV(){
+                var obj = document.getElementById('parent');
+                var newDIV = document.createElement('div');
+                newDIV.innerHTML = '새로 생성된 DIV 입니다';
+                newDIV.setAttribute('id', 'myDiv');
+                //css에서는 background-color지만 javascript에서 사용하기위해서는 backgroundColor로 바뀐다
+                newDIV.style.backgroundColor = 'yellow';
+                newDIV.onclick = function(){
+                    var p =  this.parentElement; //부모 HTML 태그 요소
+                    p.removeChild(this);
+                };
+                obj.appendChild(newDIV);
+            }
+        </script>
+   </head>
+
+    <body id="parent">
+        <h3>div 객체를 동적으로 생성, 삽입, 삭제하는 예시입니다!</h3>
+        <hr>
+        <p>DOM 트리에 동적으로 객체를 사입할 수 있습니다.
+            createElemnet(), appendChild(), removeChild() 메서드를 이용하여 
+            새로운객체를 생성, 삽입, 삭제할 수 있습니다.
+        </p>
+        <a href="javascript:createDIV()">DIV 생성</a>
+
+    </body>
+
+</html>

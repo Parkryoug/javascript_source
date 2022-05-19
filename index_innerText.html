@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <!-- DOM(Document Object Model, 문서 객체 모음) = HTML 요소(element)의 선택, 생성, 삭제 등을 위해 사용됩니다. -->
+    <!--  innerHTML : HTML, XML 문자 방식으로 요소를 생성하는 방법입니다. -->
+    <style>
+    </style>
+    <script>
+    </script>
+
+</head>
+
+<body>  
+    <p id="inner">힘내세요!
+        <span>화이팅입니다!</span>
+    </p>
+    <script>
+        // innerText는 element 내부에 있는 text값들을 말합니다!
+        console.log(document.getElementById('inner').innerText);
+    </script>
+
+<script>
+    // innerHTML은 element 내부에 있는 HTML이나 XML 모두를 말합니다!
+    console.log(document.getElementById('inner').innerHTML);
+</script>
+</body>
+</html>

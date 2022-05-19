@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <!-- DOM(Document Object Model, 문서 객체 모음) = HTML 요소(element)의 선택, 생성, 삭제 등을 위해 사용됩니다. -->
+    
+    <script>
+        // 상대 위치로 요소노드 선택하는 방법
+        window.onload = function(){
+            var gnb = document.getElementById('nice');
+            console.log(gnb.parentNode);
+            console.log(gnb.children[0]);
+            console.log(gnb.children[0].children[0]);
+            // console.log(gnb.children[0].children[0].style.background = '#00f');
+            console.log(gnb.children[0].children[0].nextElementSibling);
+            console.log(gnb.children[0].children[2].previousElementSibling);
+            // #text는 gnb.children[0].firstchild의 gnb.children[0].lastchild, 즉 ul 요소의 첫번째 자식과 마지막 자식을 의미합니다. 마크업을 할 때 엔터를 치면 그 부분을 하나의 문자로 처리합니다.
+            console.log(gnb.children[0].firstChild); // #text
+            console.log(gnb.children[0].lastChild); // #text
+            console.log(gnb.children[0].tagName); // ul 태그이름
+            console.log(gnb.children[0].children[0].firstChild.nodeValue); // 내용1
+            // nodeType은 node의 type을 상수로 리턴합니다.
+            // nodeType 리턴 상수 = 1 일때, type(타입) = element
+            // nodeType 리턴 상수 = 3 일때, type(타입) = text
+            console.log(gnb.children[0].children[0].nodeType); // 1
+            console.log(gnb.id); // nice
+            console.log(gnb.children[0].children[0].className); // first
+        }
+    </script>
+
+</head>
+
+<body>  
+    <div>  <!-- parentNode -->
+        <nav id="nice">
+            <ul>  <!-- firstChild : children[0] -->
+                <li class="first">내용1</li>  <!-- children[0] -->
+                <li>내용2</li>  <!-- children[1] -->
+                <li>내용3</li>  <!-- children[2] = lastchild -->
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

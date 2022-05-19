@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map,set 객체</title> 
+   <script>     
+   //Set 객체 : Set객체의 경우 키는 없고 값만 존재하며 중복된 값은 허용하지않습니다.
+
+   var sub = new Set(); //Set객체를 사용하는이유 데이터값을 저장하지만 키값은 없고 중복되지않은 value값들만 존재한다
+   sub.add('javascript');
+   sub.add('CSS');
+   sub.add('JQuery');
+   sub.add('Reat');
+   console.log(sub.size);
+   console.log(sub.has('CSS'));
+
+    for(var value of sub.values()){
+        console.log(value);
+    }
+
+    sub.clear()
+    console.log(sub.size);
+
+
+    var sub2 = new Set(['a','b','c']);
+
+    console.log(sub2.size);
+    sub.add('c');
+    console.log(sub2.size);
+
+
+
+</script>
+   </head>
+<body>
+    
+    
+</body>
+</html>

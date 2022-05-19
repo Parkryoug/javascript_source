@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수</title>
+    
+    <script>
+        // parameter (파라미터 = 매개변수)
+        // examPass()함수에 매개되어있는 매개변수 4개가 있습니다.
+        // 매개변수 4개는 examPass 함수의 지역변수 입니다.
+        // examPass()함수가 호출이 되었다가 소멸되면 변수도 소멸됨.
+        function examPass(name, html, css, js){// 매개변수 4개가 있습니다.
+            var comment = name + ' 학생은 ';
+            if(html >= 60 && css >= 60 && js >= 60){
+                comment += '전과목 PASS';
+            } else{
+                if(html < 60){
+                    comment += 'html 재시험, ';
+                }
+                if(css < 60){
+                    comment += 'css 재시험, ';
+                }
+                if(js < 60){
+                    comment += 'javascript 재시험';
+                }
+            }
+            return comment;
+        }
+        document.write(examPass('장나라', 80, 90, 80) + '<br>');
+        document.write(examPass('김희선', 80, 100, 50));
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

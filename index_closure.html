@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title> 
+    <script src="js/common.js"></script>
+      <script>        
+         // 클로져(Closure) : 일반적으로 함수 내 지역 변수는 함수 밖에서 참조할 수 없지만,
+         // 클로져는 함수 내 지역 변수를 함수 밖에서도 참조할 수 있게 해줍니다.
+         // multiply() 함수의 function(){return n *= n}을 num1 변수로 return 시켜주면
+         // num1 익명함수가 됩니다. 이런 형태가 되면 multiply() 함수에서 연산된
+         // 지역 변수 n값을 num1() 함수에서 지속적으로 참조할 수 있게 만들어 줍니다.
+         function multiply(n){
+            return function(){
+               return n *= n; // n = n*n;
+            }
+         }
+         
+         var num1 = multiply(10);
+         document.write(num1() + '<br>');
+
+         var num2 = multiply(20);
+         document.write(num2() + '<br>');       
+
+   </script>
+   </head>
+<body>
+    
+    
+</body>
+</html>

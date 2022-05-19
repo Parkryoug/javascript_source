@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항 연산자</title>
+    <script>
+        //var comp1 = (5 > 2);
+        //var comp2 = (5 < 2);
+        // document.write(comp1 + '<br>');
+        // = 대입 : 우항에 있는 값을 좌항에 대입
+        // == 같다 : 우항의 값과 좌항의 값이 같다
+        // === 데이터 타입까지 같다 : 우항의 데이터 타입값과 좌항의 데이터 타입값까지도 같다
+        // &&(AND 연산자) : 둘다 true(참) 조건이면 true
+        //||(OR 연산자) : 둘 중 하나만 true(참) 조건이면 true
+        //! (NOT 연산자) : 반전 처리함(true는 false로, false는 true로 바꿈)
+
+        /* if(comp2){
+            document.write('true입니다.' + '<br>');
+        }else{
+            document.write('false입니다.' + '<br>');
+        } */
+
+        //조건식 ? 실행식1 : 실행식2;
+        // 조건식이 true면 실행문1이 처리되고. 조건식이 false면 실행문2가 처리됨
+
+        var num1 = prompt('첫번째 숫자를 입력해주세요!', '');
+        var num2 = prompt('두번째 숫자를 입력해주세요!', '');
+
+        var result = (num2 > num1) ? '두번째 숫자가 큽니다!' : '첫번째 숫자가 큽니다!';
+        document.write(result);
+
+        var result = (num2 > num1);
+
+        if(result){
+            document.write('두번째 숫자가 큽니다!');
+        }else{
+            document.write('첫번째 숫자가 큽니다!');
+        }
+
+
+
+
+        
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_function</title>
+    
+    <script>
+        var rightId = 'jangnara';
+        var rightPw = '12345';
+
+        function login(id, pw){
+            if(id == rightId){ // 올바른 아이디인 경우
+                if(pw == rightPw){ // 올바른 비밀번호인 경우
+                    document.write(id + '님 방문을 환영합니다!');
+                } else{
+                    alert('잘못된 비밀번호입니다!'); // 잘못된 비밀번호인 경우
+                }
+            }else{
+                alert('존재하지 않는 아이디입니다!'); // 잘못된 아이디인 경우
+            }
+        }
+
+        var userId = prompt('아이디를 입력해 주시기 바랍니다!','');
+        var userPw = prompt('패스워드를 입력해 주시기 바랍니다!','');
+
+        login(userId, userPw);
+        
+
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

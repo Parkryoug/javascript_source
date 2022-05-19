@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+    
+    <script>
+        //객체 생성자 함수(Object constructor function)
+
+        function Info(subject, credit){
+            this.subject = subject;
+            this.credit = credit;
+            this.printOut = function(){
+                return this. subject + ', ' + this.credit + '학점';
+            };
+        };
+
+        var sub1 = new Info('html', 3);
+        sub1.days = 20; // days 속성 추가
+        document.write(sub1.days + '<br>');
+
+        delete sub1.credit; // credit 속성 제거
+        document.write(sub1.credit + '<br>'); // undefined
+        sub1.printOut = function(){ // printOut 속성 변경
+            return this.subject + ', ' + this.days + '일' + '<br>';
+        }
+        document.write(sub1.printOut());
+
+        var sub2 = new Info('css', 5);
+        document.write(sub2.days + '<br>'); // undefined
+        document.write(sub2.credit + '<br>'); // 5
+        document.write(sub2.printOut()); // css, 5학점
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

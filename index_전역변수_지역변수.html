@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title> 
+    <script src="js/common.js"></script>
+      <script>        
+   // 변수(variable)는 함수(function) 블록 { } 을 기준으로 변수의 선언 위치에 따라서
+   // '전역 변수(global variable)'와 '지역 변수(local variable)'로 나누어 집니다.
+   // '전역 변수'는 함수 블록 { } 밖이나 안에서 자유롭게 사용 가능하지만
+   // '지역 변수'는 함수 블록 { } 내에서만 사용할 수 있습니다.
+   // 블록 { } 에 의해서 변수의 범위가 달라지는 것을 변수의 scope라고 합니다.
+   // 함수 레벨 스코프(function level scope)와 블록 레벨 스코프(block level scope) 이해
+
+   // 함수의 전역변수
+   var sum1 = 10;
+   function add1(){
+      sum1 = 20;
+   }
+   add1();
+   document.write('전역변수 : ' + sum1 + '<br>');
+
+   // 함수의 지역변수
+   var sum2 = 30;
+   function add2(){
+      var sum2 = 40;
+      document.write('지역변수 : ' + sum2 + '<br>');
+   }
+   add2();
+   document.write('전역변수 : ' + sum2 + '<br>');
+
+   // 블록의 지역변수
+   var num1 = 50;
+   if(num1 === 50)   {
+      var num1 = 60;
+   }
+   document.write('전역변수 : ' + num1 + '<br>');
+
+   let num2 = 70;
+   if(num2 === 70){
+      let num2 = 80;
+      document.write('지역변수 : ' + num2 + '<br>');
+   }
+   document.write('전역변수 : ' + num2);
+      </script>
+   </head>
+<body>
+    
+    
+</body>
+</html>

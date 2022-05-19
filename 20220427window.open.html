@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    
+    
+   <script>     
+    // window 객체 open( ) 메서드 = 새로운 윈도우를 만들어주는 메서드      
+    window.onload = function(){
+        var bt = document.getElementById('bts');
+        bt.onclick = function(){
+           // '문서주소', '윈도우 이름', '윈도우의 폭 300, 윈도우의 높이 300, 윈도우의 left위치 설정, 윈도우의 top위치 선정'
+            window.open('http://www.kbs.co.kr', 'kbs', 'width=300, height=300, left =300, top= 200');
+        }
+     }
+
+
+</script>
+   </head>
+<body>
+    <button id="bts">새창열기</button>
+</body>
+</html>

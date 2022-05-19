@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    
+        
+    <head>
+        <!-- innerHTML : HTML, XML 문자 방식으로 요소를 생성하는 방법입니다. -->
+        <style>
+            div{
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 200px;
+                height: 200px;
+                background: #00ff00;
+            }
+            .m1{
+                background: #ff0000;
+            }
+        </style>
+        <script>
+            function createEle(){
+                var content = document.getElementById('content');
+                //innerHTML이 적용이된다면 style에 .m1이 적용될것이다
+                //innterHTML은 HTML 태그 생성을 해준다
+                content.innerHTML = '<p class = "m1">자바스크립트</p>';
+                
+            }
+            addEventListener('load', createEle);
+        </script>
+   </head>
+<body>
+    <div id="content"></div>
+</body>
+</html>

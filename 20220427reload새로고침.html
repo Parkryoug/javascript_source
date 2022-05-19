@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+<script>
+    //location 객체 = 웹브라우저의 주소 url 관련 객체입니다.
+
+    var i = 0;
+    setInterval(function(){
+        i++;
+        alert('5초마다 실행'+ i);
+    },5000);
+
+</script>
+   </head>
+<body>
+    <!-- reload() 메서드  = 현재 페이지를 다시 로드합니다 -->
+    <button onclick="javacript:location.reload();">새로고침</button>
+    <!-- relpace() 메서드 = replace(url)일때 url값으로 이동합니다. -->
+    <!-- <button onclick="javascript:location.replace('http://www.mbc.co.kr');">replace</button> -->
+</body>
+</html>

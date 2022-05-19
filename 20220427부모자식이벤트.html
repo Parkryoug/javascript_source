@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title> 
+    <style>
+        *{
+            margin : 0px;
+            padding: 0px;
+            
+        }
+    #outer{
+        background: red;
+        padding: 20px;
+    }    
+    #inner{
+        background-color: yellow;
+        padding: 20px;
+    }
+    </style>
+
+   <script>     
+        //stopPropagation() 메서드 활용하면 이벤트 버블링 현상을 방지해줌
+       //'이벤트 버블링'이란 부모요소/태그와 자식요소/태그 가 이벤트로 연결되어있을 경우 
+       //자식요소 이벤트가 실행될때, 부모요소 이벤트도 같이 실행되는 현상
+
+        window.onload = function(){
+            var outer = document.getElementById('outer');
+            var inner = document.getElementById('inner');
+            outer.onclick = function(){
+            alert('부모이벤트');
+            };
+            inner.onclick = function(event){
+            alert('자식이벤트');
+            event.stopPropagation(); // 자식요소를 클릭하면 자식요소의 이벤트만 발생하게 된다
+
+        
+        };
+      
+        };
+        
+        
+
+
+
+
+</script>
+   </head>
+<body>
+    <div id="outer">
+        <p id="inner">클릭</p>
+    </div>
+    
+</body>
+</html>

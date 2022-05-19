@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    
+    <script>
+        // 이벤트를 연결하는 방식에는 인라인 이벤트 모델, 기본 이벤트 모델, 표준 이벤트 모델이 있으며, 이벤트 앞에 'on'을 붙여 줍니다.
+
+        // 기본 이벤트 모델 : HTML 요소/태그/엘리먼트/element를 취득한 후 이벤트를 '객체의 메서드' 형식(객체,메서드 = function(){...})으로 연결하는 방식임.
+        // 표준 이벤트 모델 = 객체.addEventListener('이벤트', 함수)의 방식으로 이벤트를 연결합니다.
+
+        // '기본 이벤트 모델'은 객체에 동일한 이벤트가 한번만 적용되는 반면에
+        // '표준 이벤트 모델'은 여러 번 적용이 가능합니다.
+        window.onload = function(){
+            var bt = document.getElementById('bt');
+            function view(){
+                console.log('ok');
+            };
+            // 이벤트에 'on'을 붙이지 않습니다.
+            bt.addEventListener('click', view);
+        }
+
+    </script>
+</head>
+<body>
+    <button id="bt">클릭</button>
+
+
+</body>
+</html>
